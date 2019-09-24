@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "desiredUnits": {
+            "required": false,
+            "type": "string"
+        },
+        "endTime": {
+            "required": false,
+            "type": "string"
+        },
+        "filterExpression": {
+            "required": false,
+            "type": "string"
+        },
+        "includeFilteredValues": {
+            "required": false,
+            "type": "boolean"
+        },
+        "interval": {
+            "required": false,
+            "type": "string"
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        },
+        "startTime": {
+            "required": false,
+            "type": "string"
+        },
+        "timeZone": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

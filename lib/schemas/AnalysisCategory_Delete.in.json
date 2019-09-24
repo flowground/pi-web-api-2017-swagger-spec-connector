@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}

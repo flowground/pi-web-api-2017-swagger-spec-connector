@@ -1,0 +1,45 @@
+{
+    "type": "object",
+    "properties": {
+        "searchId": {
+            "required": true,
+            "type": "string"
+        },
+        "categoryName": {
+            "required": false,
+            "type": "string"
+        },
+        "descriptionFilter": {
+            "required": false,
+            "type": "string"
+        },
+        "maxCount": {
+            "required": false,
+            "type": "integer"
+        },
+        "nameFilter": {
+            "required": false,
+            "type": "string"
+        },
+        "searchFullHierarchy": {
+            "required": false,
+            "type": "boolean"
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        },
+        "sortField": {
+            "required": false,
+            "type": "string"
+        },
+        "sortOrder": {
+            "required": false,
+            "type": "string"
+        },
+        "startIndex": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}

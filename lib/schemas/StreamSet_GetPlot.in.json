@@ -1,0 +1,53 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "categoryName": {
+            "required": false,
+            "type": "string"
+        },
+        "endTime": {
+            "required": false,
+            "type": "string"
+        },
+        "intervals": {
+            "required": false,
+            "type": "integer"
+        },
+        "nameFilter": {
+            "required": false,
+            "type": "string"
+        },
+        "searchFullHierarchy": {
+            "required": false,
+            "type": "boolean"
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        },
+        "showExcluded": {
+            "required": false,
+            "type": "boolean"
+        },
+        "showHidden": {
+            "required": false,
+            "type": "boolean"
+        },
+        "startTime": {
+            "required": false,
+            "type": "string"
+        },
+        "templateName": {
+            "required": false,
+            "type": "string"
+        },
+        "timeZone": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,99 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "CategoryNames": {
+                    "example": [
+                        "Table Category"
+                    ],
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "ConvertToLocalTime": {
+                    "example": "false",
+                    "type": "boolean"
+                },
+                "Description": {
+                    "example": "Table of car info.",
+                    "type": "string"
+                },
+                "Id": {
+                    "example": "e71a0380-230b-4603-9c3c-cf8c272b6b3c",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Links": {
+                    "properties": {
+                        "Categories": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "tables/{webId}/categories"
+                        },
+                        "Data": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "tables/{webId}/data"
+                        },
+                        "Database": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}"
+                        },
+                        "Security": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "tables/{webId}/security"
+                        },
+                        "SecurityEntries": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "tables/{webId}/securityentries"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "tables/{webId}"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "CarInfo",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "Path": {
+                    "example": "\\\\MyServer\\MyDatabase\\Tables[CarInfo]",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "TimeZone": {
+                    "example": "Eastern Standard Time",
+                    "type": "string"
+                },
+                "WebId": {
+                    "example": "B0DqD5loBNH0erqeqJodtALAgAMa5wsjA0acPM-MJytrPAUkVTVFVOSVRcTUFSS1xUQUJMRVNbVEVTVFRBQkxFXQ",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

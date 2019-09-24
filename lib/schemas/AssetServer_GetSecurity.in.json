@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "securityItem": {
+            "required": true,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "userIdentity": {
+            "required": true,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "forceRefresh": {
+            "required": false,
+            "type": "boolean"
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,148 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "Description": {
+                    "example": "PI BI Project Asset Model",
+                    "type": "string"
+                },
+                "ExtendedProperties": {
+                    "additionalProperties": {
+                        "properties": {
+                            "Exception": {
+                                "x-disallow-patch": true,
+                                "x-disallow-post": true,
+                                "x-disallow-put": true,
+                                "properties": {
+                                    "Errors": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "type": "array"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "Value": {
+                                "example": 12.3,
+                                "type": "object"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "object"
+                },
+                "Id": {
+                    "example": "23913034-072C-41AC-BBBD-95FB6C4122D5",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Links": {
+                    "properties": {
+                        "AnalysisCategories": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}/analysiscategories"
+                        },
+                        "AnalysisTemplates": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}/analysistemplates"
+                        },
+                        "AssetServer": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetservers/{webId}"
+                        },
+                        "AttributeCategories": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}/attributecategories"
+                        },
+                        "ElementCategories": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}/elementcategories"
+                        },
+                        "ElementTemplates": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}/elementtemplates"
+                        },
+                        "Elements": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}/elements"
+                        },
+                        "EnumerationSets": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}/enumerationsets"
+                        },
+                        "EventFrames": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}/eventframes"
+                        },
+                        "Security": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}/security"
+                        },
+                        "SecurityEntries": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}/securityentries"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}"
+                        },
+                        "TableCategories": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}/tablecategories"
+                        },
+                        "Tables": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}/tables"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "NuGreen",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "Path": {
+                    "example": "\\\\MyServer\\NuGreen",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "WebId": {
+                    "example": "D0NxzXSxtlKkGzAaZhKOB-KABJ2buwfWrkye3YhdL2FOUAUEhMQUZTMDRcQgYUUEVSRk9STUFOQ0UgVEVTVElORw",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

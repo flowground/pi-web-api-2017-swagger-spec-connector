@@ -1,0 +1,72 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "Description": {
+                    "example": "Relative energy use per ton of process feed.",
+                    "type": "string"
+                },
+                "Id": {
+                    "example": "89c70cc2-5221-4e77-873f-894a3ea61e7d",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Links": {
+                    "properties": {
+                        "Database": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}"
+                        },
+                        "Security": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "tablecategories/{webId}/security"
+                        },
+                        "SecurityEntries": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "tablecategories/{webId}/securityentries"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "tablecategories/{webId}"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "CategoryName",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "Path": {
+                    "example": "\\\\MyServer\\Database\\CategoriesTable[CategoryName]",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "WebId": {
+                    "example": "a0DqD5loBNH0erqeqJodtALAwgzHiSFSd06HP4lKPqYefQUkVTVFVOSVRcUk9OR1xDQVRFR09SSUVTVEFCTEVbQ0FURUdPUlkxXQ",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

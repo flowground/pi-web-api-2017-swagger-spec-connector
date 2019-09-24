@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

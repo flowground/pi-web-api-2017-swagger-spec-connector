@@ -1,0 +1,150 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "ConfigString": {
+                    "example": "a := TagVal('sinusoid'); b := Pow(a, 2); c := a + b;",
+                    "type": "string"
+                },
+                "Description": {
+                    "example": "Runs a performance equation.",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "DisplayString": {
+                    "example": "a := TagVal('sinusoid'); b := Pow(a, 2); c := a + b;",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "EditorType": {
+                    "example": "OSIsoft.AF.Analysis.AnalysisRule.PEAnalysisRuleEditor",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "HasChildren": {
+                    "example": false,
+                    "type": "boolean",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Id": {
+                    "example": "392564fc-2f15-11e6-80d8-00155d844304",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "IsConfigured": {
+                    "example": false,
+                    "type": "boolean",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "IsInitializing": {
+                    "example": false,
+                    "type": "boolean",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Links": {
+                    "properties": {
+                        "Analysis": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "analyses/{webId}"
+                        },
+                        "AnalysisRules": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "analysisrules/{webId}/analysisrules"
+                        },
+                        "AnalysisTemplate": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "analysistemplates/{webId}"
+                        },
+                        "Parent": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "analysisrules/{webId}"
+                        },
+                        "PlugIn": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "analysisruleplugins/{webId}"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "analysisrules/{webId}"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "PerformanceEquation",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Path": {
+                    "example": "\\\\MYSERVER\\MyDatabase\\MyElement\\Analyses[MyAnalysis]\\AnalysisRule",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "PlugInName": {
+                    "example": "PerformanceEquation",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-required-post": true
+                },
+                "SupportedBehaviors": {
+                    "example": [
+                        "SupportsRunningCase",
+                        "SupportStatePassing",
+                        "OutputCorrectAfterSkipping"
+                    ],
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "VariableMapping": {
+                    "example": "b||Attribute1;c||Attribute2",
+                    "type": "string"
+                },
+                "WebId": {
+                    "example": "l0xDqD5loBNH0erqeqJodtALA_GQlORUv5hGA2AAVXYRDBA_GQlORUv5hGA2AAVXYRDBAUkVTVFVOSVRcNUIxQzg5REEtQTQ2Ri00NkVDLTlFMUYtRjI0NEI4OTQyRkVDXDkwQ0U0NURGLTYyODktNDgyMi04MTg2LTM3RTlBNEVENDA4RFxBTkFMWVNFU1s2QkZENjMzMS1FQTUwLTQ4OTctODcyMi0zRjc5RDFDMDNFMjNdXEFOQUxZU0lTUlVMRQ",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

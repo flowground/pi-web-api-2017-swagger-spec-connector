@@ -1,0 +1,80 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "calculationBasis": {
+            "required": false,
+            "type": "string"
+        },
+        "categoryName": {
+            "required": false,
+            "type": "string"
+        },
+        "endTime": {
+            "required": false,
+            "type": "string"
+        },
+        "filterExpression": {
+            "required": false,
+            "type": "string"
+        },
+        "nameFilter": {
+            "required": false,
+            "type": "string"
+        },
+        "sampleInterval": {
+            "required": false,
+            "type": "string"
+        },
+        "sampleType": {
+            "required": false,
+            "type": "string"
+        },
+        "searchFullHierarchy": {
+            "required": false,
+            "type": "boolean"
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        },
+        "showExcluded": {
+            "required": false,
+            "type": "boolean"
+        },
+        "showHidden": {
+            "required": false,
+            "type": "boolean"
+        },
+        "startTime": {
+            "required": false,
+            "type": "string"
+        },
+        "summaryDuration": {
+            "required": false,
+            "type": "string"
+        },
+        "summaryType": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "templateName": {
+            "required": false,
+            "type": "string"
+        },
+        "timeType": {
+            "required": false,
+            "type": "string"
+        },
+        "timeZone": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,83 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "Description": {
+                    "example": "Model Number of BMW",
+                    "type": "string"
+                },
+                "Id": {
+                    "example": "7DC2449E-B31D-41AF-AA08-75A17AA32D6A",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Links": {
+                    "properties": {
+                        "EnumerationSet": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "enumerationsets/{webId}"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "enumerationvalues/{webId}"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "BMW",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "Path": {
+                    "example": "\\\\MyServer\\NuGreen\\EnumerationSets[Model Number]\\BMW",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "SerializeDescription": {
+                    "type": "boolean"
+                },
+                "SerializeId": {
+                    "type": "boolean"
+                },
+                "SerializeLinks": {
+                    "type": "boolean"
+                },
+                "SerializePath": {
+                    "type": "boolean"
+                },
+                "SerializeWebId": {
+                    "type": "boolean"
+                },
+                "Value": {
+                    "example": 2005,
+                    "format": "int32",
+                    "type": "integer",
+                    "x-required-post": true
+                },
+                "WebId": {
+                    "example": "V0SDqD5loBNH0erqeqJodtALAChs3W0xcXUG6x0ibnAnQdgUN6jDehdLkWYmU1CkJMzgNUkTVVFVOSVR1CuVHQVJNQU5cRU5VTUVSQVRJT05TRVRTW0VOVU1FUkFUSU9OIFNFVCAzXVxB",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

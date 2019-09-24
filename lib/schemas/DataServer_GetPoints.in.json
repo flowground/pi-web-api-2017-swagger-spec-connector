@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "maxCount": {
+            "required": false,
+            "type": "integer"
+        },
+        "nameFilter": {
+            "required": false,
+            "type": "string"
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        },
+        "startIndex": {
+            "required": false,
+            "type": "integer"
+        }
+    }
+}

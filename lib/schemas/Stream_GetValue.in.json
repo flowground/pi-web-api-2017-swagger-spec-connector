@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "desiredUnits": {
+            "required": false,
+            "type": "string"
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        },
+        "time": {
+            "required": false,
+            "type": "string"
+        },
+        "timeZone": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

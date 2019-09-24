@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "endTime": {
+            "required": false,
+            "type": "string"
+        },
+        "expression": {
+            "required": false,
+            "type": "string"
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        },
+        "startTime": {
+            "required": false,
+            "type": "string"
+        },
+        "webId": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

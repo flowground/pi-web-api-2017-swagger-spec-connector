@@ -1,0 +1,102 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "Abbreviation": {
+                    "example": "Hz",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "Description": {
+                    "example": "Hertz Unit",
+                    "type": "string"
+                },
+                "Factor": {
+                    "example": 1,
+                    "format": "double",
+                    "type": "number",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Id": {
+                    "example": "609049B3-108A-4A9A-94B3-359AA092C5A0",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Links": {
+                    "properties": {
+                        "Class": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "unitclasses/{webId}"
+                        },
+                        "ReferenceUnit": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "units/{webId}"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "units/{webId}"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "Hertz",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "Offset": {
+                    "example": 0,
+                    "format": "double",
+                    "type": "number",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Path": {
+                    "example": "\\\\MyServer\\UOMDatabase\\Hertz",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "ReferenceFactor": {
+                    "example": 1,
+                    "format": "double",
+                    "type": "number"
+                },
+                "ReferenceOffset": {
+                    "example": 0,
+                    "format": "double",
+                    "type": "number"
+                },
+                "ReferenceUnitAbbreviation": {
+                    "example": "",
+                    "type": "string"
+                },
+                "WebId": {
+                    "example": "u0DqD5loBNH0eqreqJodtALAR5X5Ku22eUqbeawQJoWIdAUkVVTFVOSVRcVU9NFREUQUJBU0VcZEVSVFo",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

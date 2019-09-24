@@ -1,0 +1,156 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "AllowElementToExtend": {
+                    "example": false,
+                    "type": "boolean"
+                },
+                "BaseTemplate": {
+                    "example": "Equipment",
+                    "type": "string"
+                },
+                "CanBeAcknowledged": {
+                    "example": false,
+                    "type": "boolean"
+                },
+                "CategoryNames": {
+                    "example": [
+                        "Equipment Assets"
+                    ],
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "Description": {
+                    "example": "Boiler",
+                    "type": "string"
+                },
+                "ExtendedProperties": {
+                    "additionalProperties": {
+                        "properties": {
+                            "Exception": {
+                                "x-disallow-patch": true,
+                                "x-disallow-post": true,
+                                "x-disallow-put": true,
+                                "properties": {
+                                    "Errors": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "type": "array"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "Value": {
+                                "example": 12.3,
+                                "type": "object"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "object"
+                },
+                "Id": {
+                    "example": "74646B96-A130-40A3-AA25-49396C9D6B3C",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "InstanceType": {
+                    "example": "Element",
+                    "type": "string"
+                },
+                "Links": {
+                    "properties": {
+                        "AnalysisTemplates": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "elementtemplates/{webId}/analysistemplates"
+                        },
+                        "AttributeTemplates": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "elementtemplates/{webId}/attributetemplates"
+                        },
+                        "BaseTemplate": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "elementtemplates/{webId}"
+                        },
+                        "Categories": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "elementtemplates/{webId}/categories"
+                        },
+                        "Database": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}"
+                        },
+                        "DefaultAttribute": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "attributetemplates/{webId}"
+                        },
+                        "Security": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "elementtemplates/{webId}/security"
+                        },
+                        "SecurityEntries": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "elementtemplates/{webId}/securityentries"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "elementtemplates/{webId}"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "Boiler",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "NamingPattern": {
+                    "example": "%TEMPLATE%",
+                    "type": "string"
+                },
+                "Path": {
+                    "example": "\\\\MyServer\\NuGreen\\ElementTemplates[Boiler]",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Severity": {
+                    "example": "None",
+                    "type": "string"
+                },
+                "WebId": {
+                    "example": "T0DqD5loBNH0erqeqJodtALAvdrykzvWo0SXjjgcl9gTqAkUVTVFVOSVRcU1VHQVJ5UQNcRUxFTUVOVFRFTVBMQVRFU1t1TFRFUlBSSVNFXQ",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

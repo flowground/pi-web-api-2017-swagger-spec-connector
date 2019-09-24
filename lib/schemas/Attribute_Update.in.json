@@ -1,0 +1,195 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "CategoryNames": {
+                    "example": [
+                        "Energy Savings Targets"
+                    ],
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "ConfigString": {
+                    "example": "SELECT [Water Use] FROM [Energy Use 2008] WHERE [Asset ID] = '%Element%'",
+                    "type": "string"
+                },
+                "DataReferencePlugIn": {
+                    "example": "Table Lookup",
+                    "type": "string"
+                },
+                "DefaultUnitsName": {
+                    "example": "liters",
+                    "type": "string"
+                },
+                "Description": {
+                    "example": "2008 Water Use",
+                    "type": "string"
+                },
+                "HasChildren": {
+                    "example": false,
+                    "type": "boolean",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Id": {
+                    "example": "512B6616-CE39-4F70-9048-8C6A025FB592",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "IsConfigurationItem": {
+                    "example": false,
+                    "type": "boolean"
+                },
+                "IsExcluded": {
+                    "example": false,
+                    "type": "boolean",
+                    "x-disallow-post": true
+                },
+                "IsHidden": {
+                    "example": false,
+                    "type": "boolean"
+                },
+                "IsManualDataEntry": {
+                    "example": false,
+                    "type": "boolean"
+                },
+                "Links": {
+                    "properties": {
+                        "Attributes": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "attributes/{webId}/attributes"
+                        },
+                        "Categories": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "attributes/{webId}/categories"
+                        },
+                        "Element": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "elements/{webId}"
+                        },
+                        "EndValue": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streams/{webId}/end"
+                        },
+                        "EnumerationSet": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "enumerationsets/{webId}"
+                        },
+                        "EventFrame": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "eventframes/{webId}"
+                        },
+                        "InterpolatedData": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streams/{webId}/interpolated"
+                        },
+                        "Parent": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "attributes/{webId}"
+                        },
+                        "PlotData": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streams/{webId}/plot"
+                        },
+                        "Point": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "points/{webId}"
+                        },
+                        "RecordedData": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streams/{webId}/recorded"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "attributes/{webId}"
+                        },
+                        "SummaryData": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streams/{webId}/summary"
+                        },
+                        "Template": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "attributetemplates/{webId}"
+                        },
+                        "Trait": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "attributetraits/{name}"
+                        },
+                        "Value": {
+                            "type": "string",
+                            "x-link-optional": false
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "Water",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "Path": {
+                    "example": "\\\\MyServer\\NuGreen\\NuGreen\\Houston\\Cracking Process\\Equipment\\B-210|Water(2008)",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Step": {
+                    "example": false,
+                    "type": "boolean",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "TraitName": {
+                    "example": "LimitLoLo",
+                    "type": "string"
+                },
+                "Type": {
+                    "example": "Int32",
+                    "type": "string"
+                },
+                "TypeQualifier": {
+                    "example": "",
+                    "type": "string"
+                },
+                "WebId": {
+                    "example": "A0EDqD5loBNH0erqeqJodtALAUvtkqIDl4xG-twAFmjx6AA79jxF7HiqFwpsgMBxwgWmgUkVTVFVOSVRcU1VNJQVHQU5cTlVHUkVZTlxIT1VTVE9f0FBMQU5UQ0lUWQ",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

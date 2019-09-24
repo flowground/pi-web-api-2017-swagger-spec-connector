@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "endTime": {
+            "required": false,
+            "type": "string"
+        },
+        "exportMode": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "startTime": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

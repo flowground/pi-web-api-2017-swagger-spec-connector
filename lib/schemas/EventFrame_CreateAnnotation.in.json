@@ -1,0 +1,78 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "CreationDate": {
+                    "example": "2016-06-21T14:45:50.2988321Z",
+                    "format": "date-time",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Creator": {
+                    "example": "MyDomain\\UserA",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Description": {
+                    "example": "Signifies a spike in temperature.",
+                    "type": "string"
+                },
+                "Id": {
+                    "example": "512B6616-CE39-4F70-9048-8C6A025FB592",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Links": {
+                    "properties": {
+                        "Owner": {
+                            "type": "string",
+                            "x-link-optional": false
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false
+                        }
+                    },
+                    "type": "object"
+                },
+                "Modifier": {
+                    "example": "MyDomain\\UserA",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "ModifyDate": {
+                    "example": "2016-06-21T14:45:50.2988321Z",
+                    "format": "date-time",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Name": {
+                    "example": "Temperature Annotation",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "Value": {
+                    "example": "The temperature spiked because of a malfunction with a unit in our west plant.",
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

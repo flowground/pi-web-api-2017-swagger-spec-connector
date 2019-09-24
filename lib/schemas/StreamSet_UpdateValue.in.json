@@ -1,0 +1,97 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "bufferOption": {
+            "required": false,
+            "type": "string"
+        },
+        "updateOption": {
+            "required": false,
+            "type": "string"
+        },
+        "requestBody": {
+            "items": {
+                "properties": {
+                    "Links": {
+                        "properties": {
+                            "Source": {
+                                "type": "string",
+                                "x-link-optional": false
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "Name": {
+                        "example": "Water",
+                        "type": "string",
+                        "x-disallow-post": true
+                    },
+                    "Path": {
+                        "example": "\\\\MYSERVER\\MyDatabase\\MyElement|Water",
+                        "format": "path",
+                        "type": "string",
+                        "x-disallow-post": true
+                    },
+                    "Value": {
+                        "x-required-post": true,
+                        "properties": {
+                            "Exception": {
+                                "x-disallow-patch": true,
+                                "x-disallow-post": true,
+                                "x-disallow-put": true,
+                                "properties": {
+                                    "Errors": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "type": "array"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "Good": {
+                                "example": true,
+                                "type": "boolean"
+                            },
+                            "Questionable": {
+                                "example": false,
+                                "type": "boolean"
+                            },
+                            "Substituted": {
+                                "example": false,
+                                "type": "boolean",
+                                "x-disallow-post": true
+                            },
+                            "Timestamp": {
+                                "example": "2014-07-22T14:00:00Z",
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "UnitsAbbreviation": {
+                                "example": "m",
+                                "type": "string"
+                            },
+                            "Value": {
+                                "example": 12.3,
+                                "type": "object"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "WebId": {
+                        "example": "A0EDqD5loBNH0erqeqJodtALAUvtkqIDl4xG-twAFmjx6AA79jxF7HiqFwpsgMBxwgWmgUkVTVFVOSVRcU1VNJQVHQU5cTlVHUkVZTlxIT1VTVE9f0FBMQU5UQ0lUWQ",
+                        "format": "webid",
+                        "type": "string",
+                        "x-required-post": true
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        }
+    }
+}

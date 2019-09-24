@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "required": true,
+            "type": "string"
+        },
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "securityItem": {
+            "required": false,
+            "type": "string"
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

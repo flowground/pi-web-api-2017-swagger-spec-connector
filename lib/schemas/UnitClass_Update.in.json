@@ -1,0 +1,82 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "CanonicalUnitAbbreviation": {
+                    "example": "W",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "CanonicalUnitName": {
+                    "example": "watt",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "Description": {
+                    "example": "Power Unit Class",
+                    "type": "string"
+                },
+                "Id": {
+                    "example": "09FBCC8A-796D-4568-9287-C8B7BC5EA129",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Links": {
+                    "properties": {
+                        "AssetServer": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetservers/{webId}"
+                        },
+                        "CanonicalUnit": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "unitclasses/{webId}/canonicalunit"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "unitclasses/{webId}"
+                        },
+                        "Units": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "unitclasses/{webId}/units"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "Power",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "Path": {
+                    "example": "\\\\MyServer\\UOMDatabase\\UOMClasses[Power]",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "WebId": {
+                    "example": "K0DqD5loBNH0erqeqJodtALAEYKC2hx4DU2jygG2_AT33gVUkTVFVOSVRcVU9NREFUQUJUB0VcVU9NQ0xBU1NFU1tRVFUOVElUWV2",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

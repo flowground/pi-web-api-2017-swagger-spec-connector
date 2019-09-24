@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "time": {
+            "required": true,
+            "type": "string"
+        },
+        "webId": {
+            "required": true,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "retrievalMode": {
+            "required": false,
+            "type": "string"
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        },
+        "timeZone": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

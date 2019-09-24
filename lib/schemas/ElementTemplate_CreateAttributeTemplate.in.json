@@ -1,0 +1,142 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "CategoryNames": {
+                    "example": [
+                        "Energy Savings Targets"
+                    ],
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "ConfigString": {
+                    "example": "SELECT [Water Use] FROM [Energy Use 2008] WHERE [Asset ID] = '%Element%'",
+                    "type": "string"
+                },
+                "DataReferencePlugIn": {
+                    "example": "Table Lookup",
+                    "type": "string"
+                },
+                "DefaultUnitsName": {
+                    "example": "liters",
+                    "type": "string"
+                },
+                "DefaultValue": {
+                    "example": 0,
+                    "type": "object"
+                },
+                "Description": {
+                    "example": "2008 Water Use",
+                    "type": "string"
+                },
+                "HasChildren": {
+                    "example": false,
+                    "type": "boolean",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Id": {
+                    "example": "F82605BC-3A9C-4091-A57E-C0D9341BAD1A",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "IsConfigurationItem": {
+                    "example": false,
+                    "type": "boolean"
+                },
+                "IsExcluded": {
+                    "example": false,
+                    "type": "boolean"
+                },
+                "IsHidden": {
+                    "example": false,
+                    "type": "boolean"
+                },
+                "IsManualDataEntry": {
+                    "example": false,
+                    "type": "boolean"
+                },
+                "Links": {
+                    "properties": {
+                        "AttributeTemplates": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "attributetemplates/{webId}/attributetemplates"
+                        },
+                        "Categories": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "attributetemplates/{webId}/categories"
+                        },
+                        "ElementTemplate": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "elementtemplates/{webId}"
+                        },
+                        "Parent": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "attributetemplates/{webId}"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "attributetemplates/{webId}"
+                        },
+                        "Trait": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "attributetraits/{name}"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "Water(2008)",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "Path": {
+                    "example": "\\\\MyServer\\NuGreen\\ElementTemplates[Boiler]|Water(2008)",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "TraitName": {
+                    "example": "LimitLoLo",
+                    "type": "string"
+                },
+                "Type": {
+                    "example": "Int32",
+                    "type": "string"
+                },
+                "TypeQualifier": {
+                    "example": "",
+                    "type": "string"
+                },
+                "WebId": {
+                    "example": "t0EDqD5loBNH0erqeqJodtALACd8tc2JnkUWeQ2KsKq30iA1W9lw3cYRkCQ5TRZsrkLQAUkVTVFVORVScU1VHQVJNQU5cRUxFTUVOVFRFTVBMQVRFUTQt1EFOVF18UExBTlRUUlVOQ0FURUROQU1F",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,87 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "Account": {
+                    "example": "domain\\user",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-required-post": true
+                },
+                "Description": {
+                    "example": "",
+                    "type": "string"
+                },
+                "Id": {
+                    "example": "a353feee-3145-4bec-acda-c8ccb1daaafc",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Links": {
+                    "properties": {
+                        "AssetServer": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetservers/{webId}"
+                        },
+                        "Security": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "securitymappings/{webId}/security"
+                        },
+                        "SecurityEntries": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "securitymappings/{webId}/securityentries"
+                        },
+                        "SecurityIdentity": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "securityidentities/{webId}"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "securitymappings/{webId}"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "MySecurityMapping",
+                    "type": "string"
+                },
+                "Path": {
+                    "example": "\\\\RESTUNIT\\SecurityMappings[MySecurityMapping]",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "SecurityIdentityWebId": {
+                    "example": "I07v5To0Ux7Eus2sjMsdqq_AUEhMQUZTMDU",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "WebId": {
+                    "example": "M07v5To0Ux7Eus2sjMsdqq_AUEhMQUZTMDU",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

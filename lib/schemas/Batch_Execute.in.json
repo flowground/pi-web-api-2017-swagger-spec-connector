@@ -1,0 +1,51 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "additionalProperties": {
+                "properties": {
+                    "Content": {
+                        "type": "string"
+                    },
+                    "Headers": {
+                        "additionalProperties": {
+                            "type": "string"
+                        },
+                        "type": "object"
+                    },
+                    "Method": {
+                        "example": "GET",
+                        "type": "string",
+                        "x-required-post": true
+                    },
+                    "Parameters": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "ParentIds": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "RequestTemplate": {
+                        "properties": {
+                            "Resource": {
+                                "type": "string",
+                                "x-required-post": true
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "Resource": {
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "object"
+        }
+    }
+}

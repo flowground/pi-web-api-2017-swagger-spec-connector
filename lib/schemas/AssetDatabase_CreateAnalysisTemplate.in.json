@@ -1,0 +1,150 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "AnalysisRulePlugInName": {
+                    "example": "PerformanceEquation",
+                    "type": "string"
+                },
+                "CategoryNames": {
+                    "example": [
+                        "MyAnalysisCategory"
+                    ],
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "CreateEnabled": {
+                    "example": true,
+                    "type": "boolean"
+                },
+                "Description": {
+                    "example": "",
+                    "type": "string"
+                },
+                "GroupId": {
+                    "example": 0,
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "HasNotificationTemplate": {
+                    "example": false,
+                    "type": "boolean",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "HasTarget": {
+                    "example": false,
+                    "type": "boolean",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Id": {
+                    "example": "c0b288d0-7b22-4c9a-8241-83504a5bd85b",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Links": {
+                    "properties": {
+                        "AnalysisRule": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "analysisrules/{webId}"
+                        },
+                        "AnalysisRulePlugIn": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "analysisruleplugins/{webId}"
+                        },
+                        "Categories": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "analysistemplates/{webId}/categories"
+                        },
+                        "Database": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}"
+                        },
+                        "Security": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "analysistemplates/{webId}/security"
+                        },
+                        "SecurityEntries": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "analysistemplates/{webId}/securityentries"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "analysistemplates/{webId}"
+                        },
+                        "Target": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "elementtemplates/{webId}"
+                        },
+                        "TimeRule": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "timerules/{webId}"
+                        },
+                        "TimeRulePlugIn": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "timeruleplugins/{webId}"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "MyAnalysisTemplate",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "OutputTime": {
+                    "example": "",
+                    "type": "string"
+                },
+                "Path": {
+                    "example": "\\\\MYSERVER\\MyDatabase\\AnalysisTemplates[MyAnalysisTemplate]",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "TargetName": {
+                    "example": "MyElementTemplate",
+                    "type": "string"
+                },
+                "TimeRulePlugInName": {
+                    "example": "Periodic",
+                    "type": "string"
+                },
+                "WebId": {
+                    "example": "Y0DqD5loBNH0erqeqJodtALA0IiywCJ7mkyCQYNQSlvYWwUkVTVFVOSVRcOTdCRjMyMzMtNDgyMi00OTYxLTg4M0YtQzU2REFERERDODUzXEFOQUxZU0lTVEVNUExBVEVTW0EzMjcwNzI2LTkzMDEtNDY5NS1BQTE1LTBCOEM0NUNCNDJDQ10",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

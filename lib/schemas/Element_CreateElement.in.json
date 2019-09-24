@@ -1,0 +1,188 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "CategoryNames": {
+                    "example": [
+                        "Equipment Assets"
+                    ],
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "Description": {
+                    "example": "Boiler B-210",
+                    "type": "string"
+                },
+                "ExtendedProperties": {
+                    "additionalProperties": {
+                        "properties": {
+                            "Exception": {
+                                "x-disallow-patch": true,
+                                "x-disallow-post": true,
+                                "x-disallow-put": true,
+                                "properties": {
+                                    "Errors": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "type": "array"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "Value": {
+                                "example": 12.3,
+                                "type": "object"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "object"
+                },
+                "HasChildren": {
+                    "example": false,
+                    "type": "boolean",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Id": {
+                    "example": "FCBC2D39-4085-491B-A0EE-E25767C85FA5",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Links": {
+                    "properties": {
+                        "Analyses": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "elements/{webId}/analyses"
+                        },
+                        "Attributes": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "elements/{webId}/attributes"
+                        },
+                        "Categories": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "elements/{webId}/categories"
+                        },
+                        "Database": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}"
+                        },
+                        "DefaultAttribute": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "attributes/{webId}"
+                        },
+                        "Elements": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "elements/{webId}/elements"
+                        },
+                        "EndValue": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streamsets/{webId}/end"
+                        },
+                        "EventFrames": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "elements/{webId}/eventframes"
+                        },
+                        "InterpolatedData": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streamsets/{webId}/interpolated"
+                        },
+                        "Parent": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "elements/{webId}"
+                        },
+                        "PlotData": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streamsets/{webId}/plot"
+                        },
+                        "RecordedData": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streamsets/{webId}/recorded"
+                        },
+                        "Security": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "elements/{webId}/security"
+                        },
+                        "SecurityEntries": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "elements/{webId}/securityentries"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "elements/{webId}"
+                        },
+                        "SummaryData": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streamsets/{webId}/summary"
+                        },
+                        "Template": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "elementtemplates/{webId}"
+                        },
+                        "Value": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streamsets/{webId}/value"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "B-210",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "Path": {
+                    "example": "\\\\MyServer\\NuGreen\\NuGreen\\Houston\\Cracking Process\\Equipment\\B-210",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "TemplateName": {
+                    "example": "Boiler",
+                    "type": "string"
+                },
+                "WebId": {
+                    "example": "E0DqD5loBNH0erqeqJodtALAvGEqktDl4xG-twAFmjx6UAUkVTVFVOSVRUc1VHQVJNQU5V1TcHUkVFTg",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

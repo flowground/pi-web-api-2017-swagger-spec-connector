@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "properties": {
+        "category": {
+            "required": true,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

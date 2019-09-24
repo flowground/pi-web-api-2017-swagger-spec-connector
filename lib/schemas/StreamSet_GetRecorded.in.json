@@ -1,0 +1,65 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "boundaryType": {
+            "required": false,
+            "type": "string"
+        },
+        "categoryName": {
+            "required": false,
+            "type": "string"
+        },
+        "endTime": {
+            "required": false,
+            "type": "string"
+        },
+        "filterExpression": {
+            "required": false,
+            "type": "string"
+        },
+        "includeFilteredValues": {
+            "required": false,
+            "type": "boolean"
+        },
+        "maxCount": {
+            "required": false,
+            "type": "integer"
+        },
+        "nameFilter": {
+            "required": false,
+            "type": "string"
+        },
+        "searchFullHierarchy": {
+            "required": false,
+            "type": "boolean"
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        },
+        "showExcluded": {
+            "required": false,
+            "type": "boolean"
+        },
+        "showHidden": {
+            "required": false,
+            "type": "boolean"
+        },
+        "startTime": {
+            "required": false,
+            "type": "string"
+        },
+        "templateName": {
+            "required": false,
+            "type": "string"
+        },
+        "timeZone": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

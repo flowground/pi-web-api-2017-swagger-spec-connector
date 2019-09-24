@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "referencedElementWebId": {
+            "required": true,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "referenceType": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

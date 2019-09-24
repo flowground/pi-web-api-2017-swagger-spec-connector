@@ -1,0 +1,127 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "Descriptor": {
+                    "example": "12 Hour Sine Wave",
+                    "type": "string"
+                },
+                "DigitalSetName": {
+                    "example": "",
+                    "type": "string",
+                    "x-disallow-patch": true
+                },
+                "EngineeringUnits": {
+                    "example": "",
+                    "type": "string"
+                },
+                "Future": {
+                    "example": false,
+                    "type": "boolean",
+                    "x-disallow-patch": true
+                },
+                "Id": {
+                    "example": 8012,
+                    "format": "int32",
+                    "type": "integer",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Links": {
+                    "properties": {
+                        "Attributes": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "points/{webId}/attributes"
+                        },
+                        "DataServer": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "dataservers/{webId}"
+                        },
+                        "EndValue": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streams/{webId}/end"
+                        },
+                        "InterpolatedData": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streams/{webId}/interpolated"
+                        },
+                        "PlotData": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streams/{webId}/plot"
+                        },
+                        "RecordedData": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streams/{webId}/recorded"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "points/{webId}"
+                        },
+                        "SummaryData": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streams/{webId}/summary"
+                        },
+                        "Value": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streams/{webId}/value"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "PointName",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "Path": {
+                    "example": "\\\\MyPIServer\\PointName",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "PointClass": {
+                    "example": "classic",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-required-post": true
+                },
+                "PointType": {
+                    "example": "Float32",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-required-post": true
+                },
+                "Step": {
+                    "example": false,
+                    "type": "boolean"
+                },
+                "WebId": {
+                    "example": "P0ZkdQMwx9oUCCzSWmnpgoEwTB8AAAUEhMVlpOXDAwR0FMDjBDRjAwMV9YUTAx",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

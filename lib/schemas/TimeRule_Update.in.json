@@ -1,0 +1,127 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "ConfigString": {
+                    "example": "Frequency=300",
+                    "type": "string"
+                },
+                "ConfigStringStored": {
+                    "example": "",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Description": {
+                    "example": "Creates regular periodic time periods.",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "DisplayString": {
+                    "example": "Frequency=300",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "EditorType": {
+                    "example": "OSIsoft.AF.Time.TimeRule.PeriodicConfig",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Id": {
+                    "example": "4dd0b53c-2f18-11e6-80d8-00155d844304",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "IsConfigured": {
+                    "example": true,
+                    "type": "boolean",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "IsInitializing": {
+                    "example": false,
+                    "type": "boolean",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Links": {
+                    "properties": {
+                        "Analysis": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "analyses/{webId}"
+                        },
+                        "AnalysisTemplate": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "analysistemplates/{webId}"
+                        },
+                        "PlugIn": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "timeruleplugins/{webId}"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "timerules/{webId}"
+                        }
+                    },
+                    "type": "object"
+                },
+                "MergeDuplicatedItems": {
+                    "example": false,
+                    "type": "boolean"
+                },
+                "Name": {
+                    "example": "Periodic",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Path": {
+                    "example": "\\\\MYSERVER\\MyDatabase\\MyElement\\Analyses[MyAnalysis]\\TimeRule",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "PlugInName": {
+                    "example": "Periodic",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "WebId": {
+                    "example": "w0xDqD5loBNH0erqeqJodtALAPLXQTRgv5hGA2AAVXYRDBAPLXQTRgv5hGA2AAVXYRDBAUkVTVFVOSVRcMEMzQjczQkYtMzc2NS00QkYyLTg3N0EtRjlENTE4MDFCNkQ0XEM5NzZDOTFDLUEyOEEtNENDMS05MTQ4LUFBRTNFRTM0RERFM1xBTkFMWVNFU1syRDNCODI1NS02OTZGLTQ1MUQtQjUwRC05REJBOEQ3RDFGODBdXFRJTUVSVUxF",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "expression": {
+            "required": false,
+            "type": "string"
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        },
+        "sortOrder": {
+            "required": false,
+            "type": "string"
+        },
+        "time": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "webId": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

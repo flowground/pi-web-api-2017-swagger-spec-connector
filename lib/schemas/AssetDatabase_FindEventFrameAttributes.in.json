@@ -1,0 +1,81 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "attributeCategory": {
+            "required": false,
+            "type": "string"
+        },
+        "attributeDescriptionFilter": {
+            "required": false,
+            "type": "string"
+        },
+        "attributeNameFilter": {
+            "required": false,
+            "type": "string"
+        },
+        "attributeType": {
+            "required": false,
+            "type": "string"
+        },
+        "endTime": {
+            "required": false,
+            "type": "string"
+        },
+        "eventFrameCategory": {
+            "required": false,
+            "type": "string"
+        },
+        "eventFrameDescriptionFilter": {
+            "required": false,
+            "type": "string"
+        },
+        "eventFrameNameFilter": {
+            "required": false,
+            "type": "string"
+        },
+        "eventFrameTemplate": {
+            "required": false,
+            "type": "string"
+        },
+        "maxCount": {
+            "required": false,
+            "type": "integer"
+        },
+        "referencedElementNameFilter": {
+            "required": false,
+            "type": "string"
+        },
+        "searchFullHierarchy": {
+            "required": false,
+            "type": "boolean"
+        },
+        "searchMode": {
+            "required": false,
+            "type": "string"
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        },
+        "sortField": {
+            "required": false,
+            "type": "string"
+        },
+        "sortOrder": {
+            "required": false,
+            "type": "string"
+        },
+        "startIndex": {
+            "required": false,
+            "type": "integer"
+        },
+        "startTime": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,354 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "AcknowledgedBy": {
+                    "example": "MyDomain\\UserA",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "AcknowledgedDate": {
+                    "example": "2014-07-30T11:04:23Z",
+                    "format": "date-time",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "AreValuesCaptured": {
+                    "example": false,
+                    "type": "boolean",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "CanBeAcknowledged": {
+                    "example": true,
+                    "type": "boolean",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "CategoryNames": {
+                    "example": [
+                        "Processing Plant"
+                    ],
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "Description": {
+                    "example": "Event Frame of Past Week",
+                    "type": "string"
+                },
+                "EndTime": {
+                    "example": "2014-07-25T14:45:29Z",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "ExtendedProperties": {
+                    "additionalProperties": {
+                        "properties": {
+                            "Exception": {
+                                "x-disallow-patch": true,
+                                "x-disallow-post": true,
+                                "x-disallow-put": true,
+                                "properties": {
+                                    "Errors": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "type": "array"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "Value": {
+                                "example": 12.3,
+                                "type": "object"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "object"
+                },
+                "HasChildren": {
+                    "example": false,
+                    "type": "boolean",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Id": {
+                    "example": "6131900F-2FDD-4DD7-B082-8BB326E134F8",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "IsAcknowledged": {
+                    "example": true,
+                    "type": "boolean",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "IsAnnotated": {
+                    "example": false,
+                    "type": "boolean",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "IsLocked": {
+                    "example": false,
+                    "type": "boolean",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Links": {
+                    "properties": {
+                        "Annotations": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "eventframes/{webId}/annotations"
+                        },
+                        "Attributes": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "eventframes/{webId}/attributes"
+                        },
+                        "Categories": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "eventframes/{webId}/categories"
+                        },
+                        "Database": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetdatabases/{webId}"
+                        },
+                        "DefaultAttribute": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "attributes/{webId}"
+                        },
+                        "EndValue": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streamsets/{webId}/end"
+                        },
+                        "EventFrames": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "eventframes/{webId}/eventframes"
+                        },
+                        "InterpolatedData": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streamsets/{webId}/interpolated"
+                        },
+                        "Parent": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "eventframes/{webId}"
+                        },
+                        "PlotData": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streamsets/{webId}/plot"
+                        },
+                        "PrimaryReferencedElement": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "elements/{webId}"
+                        },
+                        "RecordedData": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streamsets/{webId}/recorded"
+                        },
+                        "ReferencedElements": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "eventframes/{webId}/referencedelements"
+                        },
+                        "Security": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "eventframes/{webId}/security"
+                        },
+                        "SecurityEntries": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "eventframes/{webId}/securityentries"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "eventframes/{webId}"
+                        },
+                        "SummaryData": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streamsets/{webId}/summary"
+                        },
+                        "Template": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "elementtemplates/{webId}"
+                        },
+                        "Value": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "streamsets/{webId}/value"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "EF20140725-001",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "Path": {
+                    "example": "\\\\MyServer\\NuGreen\\EventFrames[EF20140725-001]",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "RefElementWebIds": {
+                    "example": [
+                        "E0w9SBPTFjL0OKylZVbOOWQgp-bLbo5VGU2udzU6CQi8fgREVMTFQ1NTAwV0xJXFRFU1RcRUxFTTU"
+                    ],
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "Security": {
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true,
+                    "properties": {
+                        "CanAnnotate": {
+                            "example": true,
+                            "type": "boolean",
+                            "x-disallow-patch": true,
+                            "x-disallow-post": true,
+                            "x-disallow-put": true
+                        },
+                        "CanDelete": {
+                            "example": true,
+                            "type": "boolean",
+                            "x-disallow-patch": true,
+                            "x-disallow-post": true,
+                            "x-disallow-put": true
+                        },
+                        "CanExecute": {
+                            "example": true,
+                            "type": "boolean",
+                            "x-disallow-patch": true,
+                            "x-disallow-post": true,
+                            "x-disallow-put": true
+                        },
+                        "CanRead": {
+                            "example": true,
+                            "type": "boolean",
+                            "x-disallow-patch": true,
+                            "x-disallow-post": true,
+                            "x-disallow-put": true
+                        },
+                        "CanReadData": {
+                            "example": true,
+                            "type": "boolean",
+                            "x-disallow-patch": true,
+                            "x-disallow-post": true,
+                            "x-disallow-put": true
+                        },
+                        "CanSubscribe": {
+                            "example": true,
+                            "type": "boolean",
+                            "x-disallow-patch": true,
+                            "x-disallow-post": true,
+                            "x-disallow-put": true
+                        },
+                        "CanSubscribeOthers": {
+                            "example": true,
+                            "type": "boolean",
+                            "x-disallow-patch": true,
+                            "x-disallow-post": true,
+                            "x-disallow-put": true
+                        },
+                        "CanWrite": {
+                            "example": true,
+                            "type": "boolean",
+                            "x-disallow-patch": true,
+                            "x-disallow-post": true,
+                            "x-disallow-put": true
+                        },
+                        "CanWriteData": {
+                            "example": true,
+                            "type": "boolean",
+                            "x-disallow-patch": true,
+                            "x-disallow-post": true,
+                            "x-disallow-put": true
+                        },
+                        "HasAdmin": {
+                            "example": true,
+                            "type": "boolean",
+                            "x-disallow-patch": true,
+                            "x-disallow-post": true,
+                            "x-disallow-put": true
+                        },
+                        "Rights": {
+                            "example": [
+                                "Read",
+                                "WriteData"
+                            ],
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Severity": {
+                    "example": "None",
+                    "type": "string"
+                },
+                "StartTime": {
+                    "example": "2014-07-18T14:45:29Z",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "TemplateName": {
+                    "example": "Template",
+                    "type": "string"
+                },
+                "WebId": {
+                    "example": "F0DqD5loBNH0ereJqqodtALADqD5loBNH0cAAAAAAAOJeQVKUTVFVOSVRcU1VHQVJNQU5ZVRcFTlRGUkFNRVNbRUYyMDE0MDcyMS0wMDFd",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

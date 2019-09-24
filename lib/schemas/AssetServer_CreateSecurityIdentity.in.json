@@ -1,0 +1,81 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "Description": {
+                    "example": "",
+                    "type": "string"
+                },
+                "Id": {
+                    "example": "a353feee-3145-4bec-acda-c8ccb1daaafc",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "IsEnabled": {
+                    "example": true,
+                    "type": "boolean"
+                },
+                "Links": {
+                    "properties": {
+                        "AssetServer": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "assetservers/{webId}"
+                        },
+                        "Security": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "securityidentities/{webId}/security"
+                        },
+                        "SecurityEntries": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "securityidentities/{webId}/securityentries"
+                        },
+                        "SecurityMappings": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "securityidentities/{webId}/securitymappings"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "securityidentities/{webId}"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "MySecurityIdentity",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "Path": {
+                    "example": "\\\\RESTUNIT\\SecurityIdentities[MySecurityIdentity]",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "WebId": {
+                    "example": "I07v5To0Ux7Eus2sjMsdqq_AUEhMQUZTMDU",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

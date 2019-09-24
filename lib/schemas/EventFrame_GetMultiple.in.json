@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "properties": {
+        "asParallel": {
+            "required": false,
+            "type": "boolean"
+        },
+        "includeMode": {
+            "required": false,
+            "type": "string"
+        },
+        "path": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        },
+        "webId": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "bufferOption": {
+            "required": false,
+            "type": "string"
+        },
+        "updateOption": {
+            "required": false,
+            "type": "string"
+        },
+        "requestBody": {
+            "items": {
+                "properties": {
+                    "Exception": {
+                        "x-disallow-patch": true,
+                        "x-disallow-post": true,
+                        "x-disallow-put": true,
+                        "properties": {
+                            "Errors": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "Good": {
+                        "example": true,
+                        "type": "boolean"
+                    },
+                    "Questionable": {
+                        "example": false,
+                        "type": "boolean"
+                    },
+                    "Substituted": {
+                        "example": false,
+                        "type": "boolean",
+                        "x-disallow-post": true
+                    },
+                    "Timestamp": {
+                        "example": "2014-07-22T14:00:00Z",
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "UnitsAbbreviation": {
+                        "example": "m",
+                        "type": "string"
+                    },
+                    "Value": {
+                        "example": 12.3,
+                        "type": "object"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        }
+    }
+}

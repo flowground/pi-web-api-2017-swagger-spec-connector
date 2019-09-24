@@ -1,0 +1,74 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "required": true,
+            "type": "string"
+        },
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "applyToChildren": {
+            "required": false,
+            "type": "boolean"
+        },
+        "requestBody": {
+            "properties": {
+                "AllowRights": {
+                    "example": [
+                        "Read",
+                        "ReadData"
+                    ],
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "DenyRights": {
+                    "example": [
+                        "Write",
+                        "Execute",
+                        "Admin"
+                    ],
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "Links": {
+                    "properties": {
+                        "SecurableObject": {
+                            "type": "string",
+                            "x-link-optional": false
+                        },
+                        "SecurityIdentity": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "securityidentities/{webId}"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "domain\\user1",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "SecurityIdentityName": {
+                    "example": "domain\\user1",
+                    "type": "string",
+                    "x-disallow-put": true,
+                    "x-required-post": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

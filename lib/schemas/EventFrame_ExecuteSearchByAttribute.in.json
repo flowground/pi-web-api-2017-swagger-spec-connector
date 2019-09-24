@@ -1,0 +1,68 @@
+{
+    "type": "object",
+    "properties": {
+        "searchId": {
+            "required": true,
+            "type": "string"
+        },
+        "canBeAcknowledged": {
+            "required": false,
+            "type": "boolean"
+        },
+        "endTime": {
+            "required": false,
+            "type": "string"
+        },
+        "isAcknowledged": {
+            "required": false,
+            "type": "boolean"
+        },
+        "maxCount": {
+            "required": false,
+            "type": "integer"
+        },
+        "nameFilter": {
+            "required": false,
+            "type": "string"
+        },
+        "referencedElementNameFilter": {
+            "required": false,
+            "type": "string"
+        },
+        "searchFullHierarchy": {
+            "required": false,
+            "type": "boolean"
+        },
+        "searchMode": {
+            "required": false,
+            "type": "string"
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        },
+        "severity": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "sortField": {
+            "required": false,
+            "type": "string"
+        },
+        "sortOrder": {
+            "required": false,
+            "type": "string"
+        },
+        "startIndex": {
+            "required": false,
+            "type": "integer"
+        },
+        "startTime": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

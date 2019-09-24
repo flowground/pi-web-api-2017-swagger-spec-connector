@@ -1,0 +1,85 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "Description": {
+                    "example": "Model numbers by brand of vehicle",
+                    "type": "string"
+                },
+                "Id": {
+                    "example": "C186EF94-2028-4954-A136-FAEA79CEE9AA",
+                    "format": "uuid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "Links": {
+                    "properties": {
+                        "DataServer": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "dataservers/{webId}"
+                        },
+                        "Database": {
+                            "type": "string",
+                            "x-link-optional": true,
+                            "x-link-path": "assetdatabases/{webId}"
+                        },
+                        "Security": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "enumerationsets/{webId}/security"
+                        },
+                        "SecurityEntries": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "enumerationsets/{webId}/securityentries"
+                        },
+                        "Self": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "enumerationsets/{webId}"
+                        },
+                        "Values": {
+                            "type": "string",
+                            "x-link-optional": false,
+                            "x-link-path": "enumerationsets/{webId}/enumerationvalues"
+                        }
+                    },
+                    "type": "object"
+                },
+                "Name": {
+                    "example": "Model Number",
+                    "type": "string",
+                    "x-required-post": true
+                },
+                "Path": {
+                    "example": "\\\\MyServer\\NuGreen\\EnumerationSets[Model Number]",
+                    "format": "path",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                },
+                "SerializeDescription": {
+                    "type": "boolean"
+                },
+                "WebId": {
+                    "example": "U0qDSD5loBNH0erqeqJodtALAChs3W0xcXUG6x0ibnAnQdgUkVTVFVOScVRU1VHQVJNQU5cRX5VTUVSQVRJT05TRVRTW0VOVU1FUkFUSU9OIFNFVCAzXQ",
+                    "format": "webid",
+                    "type": "string",
+                    "x-disallow-patch": true,
+                    "x-disallow-post": true,
+                    "x-disallow-put": true
+                }
+            },
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "desiredUnits": {
+            "required": false,
+            "type": "string"
+        },
+        "retrievalMode": {
+            "required": false,
+            "type": "string"
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        },
+        "sortOrder": {
+            "required": false,
+            "type": "string"
+        },
+        "time": {
+            "required": false,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "timeZone": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

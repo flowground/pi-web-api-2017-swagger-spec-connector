@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "categoryName": {
+            "required": false,
+            "type": "string"
+        },
+        "includeInitialValues": {
+            "required": false,
+            "type": "boolean"
+        },
+        "nameFilter": {
+            "required": false,
+            "type": "string"
+        },
+        "searchFullHierarchy": {
+            "required": false,
+            "type": "boolean"
+        },
+        "showExcluded": {
+            "required": false,
+            "type": "boolean"
+        },
+        "showHidden": {
+            "required": false,
+            "type": "boolean"
+        },
+        "templateName": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}

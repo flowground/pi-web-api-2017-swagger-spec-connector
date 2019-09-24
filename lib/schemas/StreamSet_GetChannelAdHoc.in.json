@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "includeInitialValues": {
+            "required": false,
+            "type": "boolean"
+        }
+    }
+}

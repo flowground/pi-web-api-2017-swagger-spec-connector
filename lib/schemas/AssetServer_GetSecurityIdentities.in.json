@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "webId": {
+            "required": true,
+            "type": "string"
+        },
+        "field": {
+            "required": false,
+            "type": "string"
+        },
+        "maxCount": {
+            "required": false,
+            "type": "integer"
+        },
+        "query": {
+            "required": false,
+            "type": "string"
+        },
+        "selectedFields": {
+            "required": false,
+            "type": "string"
+        },
+        "sortField": {
+            "required": false,
+            "type": "string"
+        },
+        "sortOrder": {
+            "required": false,
+            "type": "string"
+        }
+    }
+}
